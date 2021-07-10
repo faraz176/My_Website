@@ -3,21 +3,24 @@
 {% block content %}
     
 
-<h1>This is the blog</h1>
+<h1 style="text-align: center;">Blogs</h1>
 
-<h2>Nabiha has written {{blog1.count}} blogie{{blog1.count |pluralize}}</h2>
-{% for blog in blog1 %}
+<!-- <h2 style="text-align: center;">Shuaib has written {{blog1.count}} blogie{{blog1.count |pluralize}}</h2>
+{% for blog in blog1 %} -->
 
-<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+<br>
+<a href="{% url 'blog:detail' blog.id %}"><h2 style="text-align: center;">{{ blog.title }}</h2></a>
 
-<p>{{ blog.description|truncatechars:50}}</p>
+<p style="text-align: center;">{{ blog.description|truncatechars:50}}</p>
 
-<h5>{{blog.date|date:'M d Y'}}</h5> 
+<h5 style="text-align: center;">{{blog.date|date:'M d Y'}}</h5> 
 
-<a href="{{blog.url}}">Link</a>
 
-<br><br><a href="{% url 'home' %}">Home</a>
 
-{% endfor %}
+<br><br>
+
+
+<!-- {% endfor %} -->
+
 
 {% endblock %}
